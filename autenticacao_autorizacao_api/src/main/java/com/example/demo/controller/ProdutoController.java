@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Produto;
+import com.example.demo.service.ProdutoService;
 
 @RestController
 @RequestMapping("/produtos")
