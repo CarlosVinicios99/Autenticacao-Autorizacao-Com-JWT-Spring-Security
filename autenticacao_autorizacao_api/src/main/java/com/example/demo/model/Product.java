@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "produtos")
-public class Produto implements Serializable {
+public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -27,11 +27,11 @@ public class Produto implements Serializable {
 	private Double preco;
 	
 	
-	public Produto() {
+	public Product() {
 		
 	}
 	
-	public Produto(Long id, String nome, Double preco) {
+	public Product(Long id, String nome, Double preco) {
 		this.id = id;
 		this.nome = nome;
 		this.preco = preco;
@@ -74,7 +74,7 @@ public class Produto implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Produto other = (Produto) obj;
+		Product other = (Product) obj;
 		return Objects.equals(id, other.id) && Objects.equals(nome, other.nome) && Objects.equals(preco, other.preco);
 	}
 	

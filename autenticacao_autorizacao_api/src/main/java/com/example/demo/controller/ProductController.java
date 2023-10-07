@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Produto;
-import com.example.demo.service.ProdutoService;
+import com.example.demo.model.Product;
+import com.example.demo.service.ProductService;
 
 @RestController
-@RequestMapping("/produtos")
-public class ProdutoController {
+@RequestMapping("/products")
+public class ProductController {
 	
 	@Autowired
-	private ProdutoService produtoService;
+	private ProductService productService;
 	
 	@PostMapping
-	public ResponseEntity<Produto> cadastrarProduto(@RequestBody Produto produto){
-		return produtoService.cadastrarProduto(produto);
+	public ResponseEntity<Product> createProduct(@RequestBody Product product){
+		return productService.createProduct(product);
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<Produto>> listarProdutos(){
-		return produtoService.listarProdutos();
+	public ResponseEntity<List<Product>> findAllProducts(){
+		return productService.findAllProducts();
 	}
 	
 	
