@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.config.security.TokenService;
 import com.example.demo.model.User;
 import com.example.demo.model.dto.AuthenticationDTO;
+import com.example.demo.model.dto.LoginResponseDTO;
 import com.example.demo.model.dto.RegisterDTO;
 import com.example.demo.repository.UserRepository;
 
@@ -31,7 +32,7 @@ public class AuthenticationService {
 			var usernamePassword = new UsernamePasswordAuthenticationToken(data.login(), data.password());
 			var auth = this.authenticationManager.authenticate(usernamePassword);
 			var token = tokenService.generateToken((User) auth.getPrincipal());
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(new LoginResponseDTO(token));
 		}
 		catch(Exception error) {
 			System.out.println(error.getMessage());

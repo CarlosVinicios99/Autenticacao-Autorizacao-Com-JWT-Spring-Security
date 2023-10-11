@@ -1,5 +1,5 @@
 package com.example.demo.model.dto;
 
-public class LoginResponseDTO {
+public record LoginResponseDTO(String token) {
 
 }
