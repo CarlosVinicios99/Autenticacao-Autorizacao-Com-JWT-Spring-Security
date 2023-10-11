@@ -7,6 +7,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.config.security.TokenService;
 import com.example.demo.model.User;
 import com.example.demo.model.dto.AuthenticationDTO;
 import com.example.demo.model.dto.RegisterDTO;
@@ -20,12 +21,22 @@ public class AuthenticationService {
 	private AuthenticationManager authenticationManager;
 	
 	@Autowired
+	private TokenService tokenService;
+	
+	@Autowired
 	private UserRepository userRepository;
 	
 	public ResponseEntity login(AuthenticationDTO data) {
-		var usernamePassword = new UsernamePasswordAuthenticationToken(data.login(), data.password());
-		var auth = this.authenticationManager.authenticate(usernamePassword);
-		return ResponseEntity.ok().build();
+		try {
+			var usernamePassword = new UsernamePasswordAuthenticationToken(data.login(), data.password());
+			var auth = this.authenticationManager.authenticate(usernamePassword);
+			var token = tokenService.generateToken((User) auth.getPrincipal());
+			return ResponseEntity.ok().build();
+		}
+		catch(Exception error) {
+			System.out.println(error.getMessage());
+			return ResponseEntity.badRequest().build();
+		}
 	}
 	
 	public ResponseEntity register(RegisterDTO data) {

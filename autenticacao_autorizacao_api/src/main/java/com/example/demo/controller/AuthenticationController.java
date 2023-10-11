@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ public class AuthenticationController {
 	private AuthenticationService authenticationService;
 	
 	@PostMapping("/login")
-	public ResponseEntity login(@RequestBody AuthenticationDTO data) {
+	public ResponseEntity login(@RequestBody @Validated AuthenticationDTO data) {
 		return authenticationService.login(data);
 	}
 	
