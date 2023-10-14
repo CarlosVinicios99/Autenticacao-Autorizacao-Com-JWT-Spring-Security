@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,12 @@ public class ProductService {
 	
 	public ResponseEntity createProduct(Product product){
 		try {
-			logger.info("Criando um novo produto");
+			logger.log(Level.INFO, "Criando um novo produto");
 			Product newProduct = this.productRepository.save(product);
 			return ResponseEntity.ok().body(newProduct);
 		}
 		catch(Exception error) {
+			logger.log(Level.SEVERE, "Erro ao criar novo produto", error.getMessage());
 			return ResponseEntity.unprocessableEntity().body(product);
 		}
 	}
@@ -57,12 +59,16 @@ public class ProductService {
 		
 	}
 	
-	public ResponseEntity deleteProductById() {
+	public ResponseEntity deleteProductById(Long id) {
 		try {
-			
+			logger.log(Level.INFO, "Excluindo produto com ID: " + id);
+			Product deletedProduct = this.productRepository.findById(id).get();
+			productRepository.delete(deletedProduct);
+			return ResponseEntity.ok().build();
 		}
 		catch(Exception error) {
-			return ResponseEntity.noContent().build()
+			logger.log(Level.SEVERE, "Erro ao excluir produto", error.getMessage());
+			return ResponseEntity.noContent().build();
 		}
 	}
 	
