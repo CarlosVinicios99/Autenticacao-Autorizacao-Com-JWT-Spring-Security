@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.model.Product;
+import com.example.demo.model.dto.ProductUpdateDTO;
 import com.example.demo.repository.ProductRepository;
 
 @Service
@@ -34,29 +35,49 @@ public class ProductService {
 	
 	public ResponseEntity findAllProducts(){
 		try {
+			logger.log(Level.INFO, "Buscando todos os produtos");
 			List<Product> products = this.productRepository.findAll();
 			return ResponseEntity.ok().body(products);
 		}
 		catch(Exception error) {
-			return ResponseEntity.noContent().build();
+			logger.log(Level.SEVERE, "Erro ao buscar todos os produtos");
+			return ResponseEntity.badRequest().build();
 		}
 	}
 	
 	public ResponseEntity findProductById(Long id){
 		try {
-			Product searchedProduct = productRepository.findById(id).get();
+			logger.log(Level.INFO, "Buscando produto com ID: " + id);
+			Product searchedProduct = this.productRepository.findById(id).get();
 			if(searchedProduct != null) {
 				return ResponseEntity.ok().body(searchedProduct);
 			}
 			throw new Error();
 		}
 		catch(Exception error) {
+			logger.log(Level.SEVERE, "Erro ao buscar produto", error.getMessage());
 			return ResponseEntity.noContent().build();
 		}
 	}
 	
-	public ResponseEntity updateProduct() {
-		
+	public ResponseEntity updateProduct(ProductUpdateDTO product) {
+		try {
+			logger.log(Level.INFO, "Atualizando produto com ID: " + product.id());
+			Product searchedProduct = this.productRepository.findById(product.id()).get();
+			if(searchedProduct != null) {
+				if(product.name() != null) {
+					searchedProduct.setName(product.name());
+				}
+				if(product.price() != null) {
+					searchedProduct.setPrice(product.price());
+				}
+			}
+			throw new Error();
+		}
+		catch(Exception error) {
+			logger.log(Level.SEVERE, "Erro ao atualizar produto", error.getMessage());
+			return ResponseEntity.noContent().build();
+		}
 	}
 	
 	public ResponseEntity deleteProductById(Long id) {
