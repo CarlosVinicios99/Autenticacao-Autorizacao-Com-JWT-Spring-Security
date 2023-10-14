@@ -2866,3 +2866,144 @@ java.lang.ClassNotFoundException: org.springframework.ide.vscode.commons.protoco
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 17:40:41.082
 !MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 17:45:40.549
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 17:55:09.320
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.eclipse.jface 2 0 2023-10-14 18:29:44.078
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-14 18:29:44.078
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:31:06.034
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:31:06.100
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:31:07.343
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:32:50.239
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:32:51.449
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:35:50.922
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:35:52.054
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:37:43.870
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:37:48.878
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:38:17.341
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:40:29.005
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:41:52.833
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:42:14.862
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:43:20.641
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:43:26.902
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:43:34.303
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:44:32.921
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:44:35.093
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:47:28.229
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:47:31.367
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:47:42.942
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:48:40.041
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:52:54.388
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:53:30.570
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:54:28.621
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:55:50.422
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:58:47.594
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 18:59:35.863
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:00:51.220
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:01:17.973
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:05:16.887
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:05:21.625
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:06:28.805
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:07:30.055
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:08:22.994
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:09:31.842
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:13:11.724
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-14 19:13:40.789
+!MESSAGE Classpath changed for project: autenticacao_autorizacao_api

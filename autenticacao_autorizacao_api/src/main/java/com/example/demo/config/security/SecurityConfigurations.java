@@ -30,10 +30,12 @@ public class SecurityConfigurations {
 				authorize -> authorize
 					.requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
 					.requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
-					.requestMatchers(HttpMethod.POST, "/products")
-					.hasRole("ADMIN")
+					.requestMatchers(HttpMethod.POST, "/products").hasRole("ADMIN")
+					.requestMatchers(HttpMethod.PUT, "/products").hasRole("ADMIN")
+					.requestMatchers(HttpMethod.DELETE, "/products").hasRole("ADMIN")
+					.requestMatchers(HttpMethod.GET, "/products").authenticated()
 					.anyRequest()
-					.authenticated()
+					.permitAll()
 			)
 			.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
 			.build();
